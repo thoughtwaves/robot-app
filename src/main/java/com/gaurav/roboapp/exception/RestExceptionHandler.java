@@ -14,7 +14,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
  
     @ExceptionHandler({ OverweightException.class })
-    public ResponseEntity<Object> handleAccessDeniedException(
+    public ResponseEntity<Object> handleException(
       Exception ex, WebRequest request) {
         return new ResponseEntity<Object>(
           ex.getMessage(), new HttpHeaders(), HttpStatus.BAD_REQUEST);
